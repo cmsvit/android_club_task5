@@ -4,7 +4,7 @@ Assignment 4 - Using Context API for State Management<br>(Provider & Consumer Co
 
 ## Working
 
-- Make a Provider
+- Make a Provider [context/CountContextProvider.js](https://github.com/cmsvit/android_club_task5/blob/main/context/countContextProvider.js)
 ```js
 const CountContext = createContext();
 
@@ -26,7 +26,7 @@ export function useCountContext() {
 }
 ```
 
-- Use the provider as a parent in the component tree
+- Use the provider as a parent in the component tree [App.js](https://github.com/cmsvit/android_club_task5/blob/main/App.js)
 ```js
 export default function App() {
   return (
@@ -37,7 +37,7 @@ export default function App() {
 }
 ```
 
-- Use the context to access the variable and change state
+- Use the context to access the variable and change state [components/MainScreen.js](https://github.com/cmsvit/android_club_task5/blob/main/components/MainScreen.js)
 ```js
 export default function MainScreen() {
   const countContext = useCountContext();
