@@ -1,18 +1,13 @@
 import React from 'react';
-import type {Node} from 'react';
-import {Appbar} from 'react-native-paper';
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 
-const App: () => Node = () => {
+import MainScreen from './components/MainScreen';
+
+import CountContextProvider from './context/CountContextProvider';
+
+export default function App() {
   return (
-    <SafeAreaView>
-      <Appbar.Header>
-        <Appbar.Content title="Using Context API" />
-      </Appbar.Header>
-    </SafeAreaView>
+    <CountContextProvider>
+      <MainScreen />
+    </CountContextProvider>
   );
-};
-
-const styles = StyleSheet.create({});
-
-export default App;
+}
